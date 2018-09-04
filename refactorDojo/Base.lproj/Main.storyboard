@@ -95,7 +95,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKW-OR-b4u">
-                                <rect key="frame" x="-0.5" y="17" width="375" height="20"/>
+                                <rect key="frame" x="0.0" y="17" width="375" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="ORQ-eu-40m"/>
                                 </constraints>

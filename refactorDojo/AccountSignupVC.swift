@@ -19,7 +19,8 @@ class AccountSignupVC: UIViewController {
 		super.viewDidLoad()
 		
 		// Do any additional setup after loading the view.
-	}
+        backButton.imageView?.contentMode = .scaleAspectFit
+    }
 	
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
@@ -31,7 +32,4 @@ class AccountSignupVC: UIViewController {
 	@IBAction func backButtonPress(_ sender: UIButton) {
 		self.dismiss(animated: true, completion: nil)
 	}
-	
-	
-	
 }
