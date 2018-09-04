@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="140" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Account SignupVC-->
         <scene sceneID="Mzi-hG-M2Q">
             <objects>
-                <viewController id="2It-Uw-yf8" sceneMemberID="viewController">
+                <viewController id="2It-Uw-yf8" customClass="AccountSignupVC" customModule="refactorDojo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qFy-UG-KnF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,21 +94,29 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-grey-chev-up" translatesAutoresizingMaskIntoConstraints="NO" id="VWH-KU-gb6">
-                                <rect key="frame" x="0.0" y="20" width="375" height="20"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKW-OR-b4u">
+                                <rect key="frame" x="-0.5" y="17" width="375" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="SKu-Yz-a9I"/>
+                                    <constraint firstAttribute="height" constant="20" id="ORQ-eu-40m"/>
                                 </constraints>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" pointSize="5"/>
+                                <state key="normal" image="icon-grey-chev-up"/>
+                                <connections>
+                                    <action selector="backButtonPress:" destination="2It-Uw-yf8" eventType="touchUpInside" id="Ds4-ag-AJu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="VWH-KU-gb6" firstAttribute="width" secondItem="qFy-UG-KnF" secondAttribute="width" id="9EH-qz-jr9"/>
-                            <constraint firstItem="VWH-KU-gb6" firstAttribute="centerX" secondItem="Ax4-NF-LJJ" secondAttribute="centerX" id="a6C-RJ-vNr"/>
-                            <constraint firstItem="VWH-KU-gb6" firstAttribute="top" secondItem="Ax4-NF-LJJ" secondAttribute="top" id="ucS-LP-ztL"/>
+                            <constraint firstItem="fKW-OR-b4u" firstAttribute="centerX" secondItem="Ax4-NF-LJJ" secondAttribute="centerX" id="355-AX-2km"/>
+                            <constraint firstItem="Ax4-NF-LJJ" firstAttribute="top" secondItem="fKW-OR-b4u" secondAttribute="top" constant="3" id="Ylv-P4-F8X"/>
+                            <constraint firstItem="fKW-OR-b4u" firstAttribute="width" secondItem="qFy-UG-KnF" secondAttribute="width" id="rRN-Xg-CRG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ax4-NF-LJJ"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="fKW-OR-b4u" id="wmv-Dw-0HU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j8J-T9-bFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
