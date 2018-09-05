@@ -41,6 +41,10 @@ class DestinyListTVC: UITableViewController {
             
             destination.devTopics = self.devTopics
         }
+		/*****************************************************************
+		KSNotes:
+		I want to understand these segue methods even better...
+		******************************************************************/
     }
     
     /** TVC overrides **/
@@ -76,16 +80,27 @@ class DestinyListTVC: UITableViewController {
             // Swift selected (1st item in destinyList array)
             
             // To-Do: set the dev topics array equal to a list of Swift topics you want to learn about most (can be whatever you want, haha)
+			devTopics = ["Classes", "Comments", "Operators", "Variables", "Calendars", "PickerViews", "More on Arrays", "Preparing Segue Statements", "Performing Segue Statements"]
         }
         else if (indexPath.row == 1) {
             // PHP Selected
-            devTopics = ["Classes", "Comments", "Operators", "Variables"]
+            devTopics = ["Nothing for PHP; Coming Soon!"]
         }
+		
+		else if (indexPath.row == 2) {
+			// JavaScript Selected
+			devTopics = ["Nothing for JavaScript; Coming Soon!"]
+		}
         // To-Do: Finish the series of if statements for the remaining option(s)
     
         // After we set devTopics variable, we fire perform segue function
         // Note what we're to override this function above to pass info over
         self.performSegue(withIdentifier: "showDevTopicsSegue", sender: self)
+		
+		/****************************************************
+		KSNotes:
+		I'm not sure I can explain back to you what you did here.
+		*****************************************************/
     }
 
 }
