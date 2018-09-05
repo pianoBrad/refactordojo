@@ -15,6 +15,7 @@
 		2D6420DF213DEA3D0006BD7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6420DD213DEA3D0006BD7B /* LaunchScreen.storyboard */; };
 		2D6420EA213DEA3D0006BD7B /* refactorDojoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6420E9213DEA3D0006BD7B /* refactorDojoTests.swift */; };
 		2D6420F5213DEA3D0006BD7B /* refactorDojoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6420F4213DEA3D0006BD7B /* refactorDojoUITests.swift */; };
+		2DF3867C213F6E87009C86D0 /* DevTopicsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF3867B213F6E87009C86D0 /* DevTopicsTVC.swift */; };
 		690CB7C0213F36820058CC38 /* AccountSignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690CB7BF213F36820058CC38 /* AccountSignupVC.swift */; };
 		690CB7C2213F4B850058CC38 /* DestinyListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690CB7C1213F4B850058CC38 /* DestinyListTVC.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		2D6420F0213DEA3D0006BD7B /* refactorDojoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = refactorDojoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D6420F4213DEA3D0006BD7B /* refactorDojoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = refactorDojoUITests.swift; sourceTree = "<group>"; };
 		2D6420F6213DEA3D0006BD7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DF3867B213F6E87009C86D0 /* DevTopicsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevTopicsTVC.swift; sourceTree = "<group>"; };
 		690CB7BF213F36820058CC38 /* AccountSignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSignupVC.swift; sourceTree = "<group>"; };
 		690CB7C1213F4B850058CC38 /* DestinyListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinyListTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +108,7 @@
 				2D6420D1213DEA3C0006BD7B /* AppDelegate.swift */,
 				2D6420D3213DEA3C0006BD7B /* ViewController.swift */,
 				2D6420D5213DEA3C0006BD7B /* Main.storyboard */,
+				2DF3867B213F6E87009C86D0 /* DevTopicsTVC.swift */,
 				690CB7C1213F4B850058CC38 /* DestinyListTVC.swift */,
 				690CB7BF213F36820058CC38 /* AccountSignupVC.swift */,
 				2D6420DB213DEA3D0006BD7B /* Assets.xcassets */,
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				690CB7C0213F36820058CC38 /* AccountSignupVC.swift in Sources */,
+				2DF3867C213F6E87009C86D0 /* DevTopicsTVC.swift in Sources */,
 				690CB7C2213F4B850058CC38 /* DestinyListTVC.swift in Sources */,
 				2D6420D4213DEA3C0006BD7B /* ViewController.swift in Sources */,
 				2D6420D2213DEA3C0006BD7B /* AppDelegate.swift in Sources */,
@@ -443,7 +447,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KWRG283N5S;
+				DEVELOPMENT_TEAM = A46J4WF27R;
 				INFOPLIST_FILE = refactorDojo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -462,7 +466,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KWRG283N5S;
+				DEVELOPMENT_TEAM = A46J4WF27R;
 				INFOPLIST_FILE = refactorDojo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (

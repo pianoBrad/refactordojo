@@ -13,7 +13,10 @@ class DestinyListTVC: UITableViewController {
 	/** Properties **/
 	
 	let destinyList = ["Swift", "PHP", "JavaScript"]
+    var devTopics = ["No topics available"]
 
+    /** VC overrides **/
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,7 +32,18 @@ class DestinyListTVC: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
+    /**
+     * Brad-Add: added to prepare for and send data to the next tableview controller
+     **/
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destination = segue.destination as? DevTopicsTVC {
+            
+            destination.devTopics = self.devTopics
+        }
+    }
+    
+    /** TVC overrides **/
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -48,5 +62,30 @@ class DestinyListTVC: UITableViewController {
 		return destinyCell
 	}
 
+    /**
+     * Brad-Add: Added this override in to capture the event when a user taps a particular cell
+     *
+     * Properties:
+     * tableView = the tableView that contained the row being tapped
+     * indexPath = the row number the user tapped (starting with 0 as 1st row)
+     **/
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // There's a better way to do this, but a series of if statements will work to help us determine which subject was selected
+        if (indexPath.row == 0) {
+            // Swift selected (1st item in destinyList array)
+            
+            // To-Do: set the dev topics array equal to a list of Swift topics you want to learn about most (can be whatever you want, haha)
+        }
+        else if (indexPath.row == 1) {
+            // PHP Selected
+            devTopics = ["Classes", "Comments", "Operators", "Variables"]
+        }
+        // To-Do: Finish the series of if statements for the remaining option(s)
+    
+        // After we set devTopics variable, we fire perform segue function
+        // Note what we're to override this function above to pass info over
+        self.performSegue(withIdentifier: "showDevTopicsSegue", sender: self)
+    }
 
 }
