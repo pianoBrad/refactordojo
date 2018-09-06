@@ -82,6 +82,9 @@ class DestinyListTVC: UITableViewController {
             // To-Do: set the dev topics array equal to a list of Swift topics you want to learn about most (can be whatever you want, haha)
 			devTopics = ["Classes", "Comments", "Operators", "Variables", "Calendars", "PickerViews", "More on Arrays", "Preparing Segue Statements", "Performing Segue Statements"]
         }
+			
+			//************ this comment is to see if the git repo profile works...
+			
         else if (indexPath.row == 1) {
             // PHP Selected
             devTopics = ["Nothing for PHP; Coming Soon!"]
