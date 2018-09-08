@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D273810214336D800706CA7 /* LandingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D27380F214336D800706CA7 /* LandingVC.swift */; };
 		2D6420D2213DEA3C0006BD7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6420D1213DEA3C0006BD7B /* AppDelegate.swift */; };
 		2D6420D4213DEA3C0006BD7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6420D3213DEA3C0006BD7B /* ViewController.swift */; };
 		2D6420D7213DEA3C0006BD7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6420D5213DEA3C0006BD7B /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D27380F214336D800706CA7 /* LandingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingVC.swift; sourceTree = "<group>"; };
 		2D6420CE213DEA3C0006BD7B /* refactorDojo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = refactorDojo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D6420D1213DEA3C0006BD7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D6420D3213DEA3C0006BD7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				2D6420D1213DEA3C0006BD7B /* AppDelegate.swift */,
 				2D6420D3213DEA3C0006BD7B /* ViewController.swift */,
 				2D6420D5213DEA3C0006BD7B /* Main.storyboard */,
+				2D27380F214336D800706CA7 /* LandingVC.swift */,
 				690CB7C1213F4B850058CC38 /* DestinyListTVC.swift */,
 				2DF3867B213F6E87009C86D0 /* DevTopicsTVC.swift */,
 				690CB7BF213F36820058CC38 /* AccountSignupVC.swift */,
@@ -271,6 +274,7 @@
 				690CB7C0213F36820058CC38 /* AccountSignupVC.swift in Sources */,
 				2DF3867C213F6E87009C86D0 /* DevTopicsTVC.swift in Sources */,
 				690CB7C2213F4B850058CC38 /* DestinyListTVC.swift in Sources */,
+				2D273810214336D800706CA7 /* LandingVC.swift in Sources */,
 				2D6420D4213DEA3C0006BD7B /* ViewController.swift in Sources */,
 				2D6420D2213DEA3C0006BD7B /* AppDelegate.swift in Sources */,
 				2D6420DA213DEA3C0006BD7B /* refactorDojo.xcdatamodeld in Sources */,

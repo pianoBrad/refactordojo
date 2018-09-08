@@ -99,7 +99,7 @@ class DestinyListTVC: UITableViewController {
         // After we set devTopics variable, we fire perform segue function
         // Note what we're to override this function above to pass info over
         self.performSegue(withIdentifier: "showDevTopicsSegue", sender: self)
-		
+        
 		/****************************************************
 		KSNotes:
 		I'm not sure I can explain back to you what you did here.
