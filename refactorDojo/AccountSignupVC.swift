@@ -8,6 +8,13 @@
 
 import UIKit
 
+/**
+ * If a class is a blueprint for an object,
+ * a protocol is a blueprint for a delegate
+ 
+ * This protocol definition (usually placed above the class definition),
+ * will be used to alert any surrounding display about the new user account
+ **/
 protocol AccountSignupVCDelegate : class {
     
     func accountCreated(forUser: String?)
@@ -24,6 +31,12 @@ class AccountSignupVC: UIViewController {
     @IBOutlet weak var feedbackLabel: UILabel!
     
     var accountCreated : Bool = false
+    /**
+     * Here, we add a delegate property to our main class to allow
+     * any views conforming to our protocol (in our case, the LandingVC),
+     * to hook into this and listen to any explicitly created object
+     * of this AccountSignupVC class.
+     **/
     weak var delegate : AccountSignupVCDelegate?
     
 	override func viewDidLoad() {
@@ -33,11 +46,6 @@ class AccountSignupVC: UIViewController {
         backButton.imageView?.contentMode = .scaleAspectFit
     }
 	
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /**
          * Any time a user taps on the screen, we dismiss the keyboard,

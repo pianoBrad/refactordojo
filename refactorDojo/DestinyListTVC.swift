@@ -15,25 +15,19 @@ class DestinyListTVC: UITableViewController {
 	let destinyList = ["Swift", "PHP", "JavaScript"]
     var devTopics = ["No topics available"]
 
-    /** VC overrides **/
+    /** overrides: UIViewController **/
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     /**
      * Brad-Add: added to prepare for and send data to the next tableview controller
+     *
+     * This prepare method always fires before a segue is performed. So, before we
+     * transition to the next view, we want to be sure we set the views devTopics to
+     * be equal to the topics we want to display there (which we defined in the
+     * didSelectRowAt function override starting around line 68
      **/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -41,13 +35,9 @@ class DestinyListTVC: UITableViewController {
             
             destination.devTopics = self.devTopics
         }
-		/*****************************************************************
-		KSNotes:
-		I want to understand these segue methods even better...
-		******************************************************************/
     }
     
-    /** TVC overrides **/
+    /** overrides: UITableViews **/
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -67,43 +57,37 @@ class DestinyListTVC: UITableViewController {
 	}
 
     /**
-     * Brad-Add: Added this override in to capture the event when a user taps a particular cell
+     * This override fires whenever a row in a table on this view controller is tapped.
      *
-     * Properties:
-     * tableView = the tableView that contained the row being tapped
-     * indexPath = the row number the user tapped (starting with 0 as 1st row)
+     * We can find out details about which row was tapped here and do different things
+     *   based on what we learn of the tapped row.
      **/
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        // There's a better way to do this, but a series of if statements will work to help us determine which subject was selected
-        if (indexPath.row == 0) {
-            // Swift selected (1st item in destinyList array)
-            
-            // To-Do: set the dev topics array equal to a list of Swift topics you want to learn about most (can be whatever you want, haha)
-			devTopics = ["Classes", "Comments", "Operators", "Variables", "Calendars", "PickerViews", "More on Arrays", "Preparing Segue Statements", "Performing Segue Statements"]
-        }
-			
-			//************ this comment is to see if the git repo profile works...
-			
-        else if (indexPath.row == 1) {
-            // PHP Selected
-            devTopics = ["Nothing for PHP; Coming Soon!"]
-        }
-		
-		else if (indexPath.row == 2) {
-			// JavaScript Selected
-			devTopics = ["Nothing for JavaScript; Coming Soon!"]
-		}
-        // To-Do: Finish the series of if statements for the remaining option(s)
-    
-        // After we set devTopics variable, we fire perform segue function
-        // Note what we're to override this function above to pass info over
-        self.performSegue(withIdentifier: "showDevTopicsSegue", sender: self)
+        /**
+         * Brad-add: Switched the chained if/else statements to a switch statement.
+         * Switch statements are better performing
+         
+         * To-Do:
+            * Review the switch statement code and see if you can understand what it's doing.
+            * We'll talk about conditionals in more detail in-person :)
+         **/
         
-		/****************************************************
-		KSNotes:
-		I'm not sure I can explain back to you what you did here.
-		*****************************************************/
+        switch (indexPath.row) {
+        case 1:
+            devTopics = ["Nothing for PHP; Coming Soon!"]
+            break
+        case 2:
+            devTopics = ["Nothing for JavaScript; Coming Soon!"]
+            break
+        default:
+            devTopics = ["Classes", "Comments", "Operators", "Variables", "Conditionals", "Loops", "Calendars", "PickerViews", "More on Arrays", "Preparing Segue Statements", "Performing Segue Statements"]
+        }
+    
+        /**
+         * After we define which set of topics we want to see on the next screen,
+         * we call the method which will pass us to that next screen.
+         **/
+        self.performSegue(withIdentifier: "showDevTopicsSegue", sender: self)
     }
-
 }
