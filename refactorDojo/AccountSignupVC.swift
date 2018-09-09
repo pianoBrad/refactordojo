@@ -80,13 +80,13 @@ class AccountSignupVC: UIViewController {
             })
         } else {
             // Account creation failed
+			
         }
     }
     
     /** Custom Functions **/
-    
-    func tryCreateAccount() -> Bool {
-        
+	
+	
         // Do the creation stuff here
         /**
          * To-Do:
@@ -97,7 +97,26 @@ class AccountSignupVC: UIViewController {
             appropriate feedback and to direct the user to complete
             the form.
          **/
-        
+		
+		
+		/************************ My Stab at it ***********************/
+	func tryCreateAccount() -> Bool {
+		/**********************    From this line Down    ********************/
+		let characterCount = 8
+		let passwordCountMin = (passwordTextField.text?.count)! < characterCount
+		
+		
+		if (emailTextField.text?.isEmpty)! {
+			feedbackLabel.text = "Missing Email Address"
+			return false
+		} else if passwordCountMin {
+			feedbackLabel.text = "Password must be \n at least 8 characters"
+			return false
+		}
+		
+		
+
+		/**********************    From this line up    ***********************/
         return true
     }
 }
