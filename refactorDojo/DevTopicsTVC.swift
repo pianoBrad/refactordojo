@@ -21,6 +21,7 @@ class DevTopicsTVC: UITableViewController {
     var devTopics = ["No Topics Available"]
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
     }
 

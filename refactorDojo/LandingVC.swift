@@ -17,6 +17,13 @@ class LandingVC: UIViewController  {
     }
 }
 
+/**
+ * extending LandingVC to be an AccountSignupVCDelegate responder
+ * This would be same as if we did the following on line 11:
+    * class LandingVC: UIViewController, AccountSignupVCDelegate
+ * extensions are oftentimes cleaner & help separate code into
+ * more readable and organized chunks (always a good programming practice)
+ **/
 extension LandingVC : AccountSignupVCDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

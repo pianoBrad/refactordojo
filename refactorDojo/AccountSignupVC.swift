@@ -31,10 +31,11 @@ class AccountSignupVC: UIViewController {
     @IBOutlet weak var feedbackLabel: UILabel!
     
     var accountCreated : Bool = false
+    
     /**
      * Here, we add a delegate property to our main class to allow
      * any views conforming to our protocol (in our case, the LandingVC),
-     * to hook into this and listen to any explicitly created object
+     * to hook into this and listen to any explicitly created instance
      * of this AccountSignupVC class.
      **/
     weak var delegate : AccountSignupVCDelegate?
@@ -42,7 +43,6 @@ class AccountSignupVC: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		// Do any additional setup after loading the view.
         backButton.imageView?.contentMode = .scaleAspectFit
     }
 	
@@ -86,25 +86,10 @@ class AccountSignupVC: UIViewController {
     
     /** Custom Functions **/
 	
-	
-        // Do the creation stuff here
-        /**
-         * To-Do:
-         * Add conditions that return false if the username or password
-         * text fields have no entered text
-         
-         * Bonus points: update the feedback text field to provide
-            appropriate feedback and to direct the user to complete
-            the form.
-         **/
-		
-		
-		/************************ My Stab at it ***********************/
 	func tryCreateAccount() -> Bool {
-		/**********************    From this line Down    ********************/
+        
 		let characterCount = 8
 		let passwordCountMin = (passwordTextField.text?.count)! < characterCount
-		
 		
 		if (emailTextField.text?.isEmpty)! {
 			feedbackLabel.text = "Missing Email Address"
@@ -113,10 +98,6 @@ class AccountSignupVC: UIViewController {
 			feedbackLabel.text = "Password must be \n at least 8 characters"
 			return false
 		}
-		
-		
-
-		/**********************    From this line up    ***********************/
         return true
     }
 }

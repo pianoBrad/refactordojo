@@ -49,11 +49,21 @@ class DestinyListTVC: UITableViewController {
 
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		
-		let destinyCell = UITableViewCell()
-		
-		destinyCell.textLabel?.text = destinyList[indexPath.row]
-		
-		return destinyCell
+		/**
+         * Changed this to load reusable objects of the new custom TopicTVC Class
+         * dequeueReusableCell (rather than initing a new table cell for each row),
+         * helps save the app's performance, as it reuses an existing created object.
+         * When tables have a million rows, this strategy becomes vital to help
+         * prevent apps from crashing.
+         **/
+ 
+        if let destinyCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TopicCell {
+            destinyCell.textLabel?.text = destinyList[indexPath.row]
+            return destinyCell
+        } else {
+            print("Custom table cell Class not properly loading for table cell.")
+            return UITableViewCell()
+        }
 	}
 
     /**
