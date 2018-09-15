@@ -91,7 +91,7 @@ class DestinyListTVC: UITableViewController {
             devTopics = ["Nothing for JavaScript; Coming Soon!"]
             break
         default:
-            devTopics = ["Classes", "Comments", "Operators", "Variables", "Conditionals", "Loops", "Calendars", "PickerViews", "More on Arrays", "Preparing Segue Statements", "Performing Segue Statements"]
+            devTopics = ["Classes", "Comments", "Operators", "Variables", "Conditionals", "Protocols & Delegates (Test)", "Protocols & Delegates (Answers)", "Loops", "Calendars", "PickerViews", "More on Arrays", "Preparing Segue Statements", "Performing Segue Statements"]
         }
     
         /**

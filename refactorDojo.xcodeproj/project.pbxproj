@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D1636D5214D92CA00733D05 /* whosGoatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1636D4214D92CA00733D05 /* whosGoatVC.swift */; };
+		2D1636D9214D95DD00733D05 /* chooseYourGoatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1636D8214D95DD00733D05 /* chooseYourGoatVC.swift */; };
+		2D1636DB214D98B500733D05 /* goatOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1636DA214D98B500733D05 /* goatOptionView.swift */; };
 		2D273810214336D800706CA7 /* LandingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D27380F214336D800706CA7 /* LandingVC.swift */; };
 		2D542A462145C1630016C477 /* TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D542A452145C1630016C477 /* TopicCell.swift */; };
 		2D6420D2213DEA3C0006BD7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6420D1213DEA3C0006BD7B /* AppDelegate.swift */; };
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D1636D4214D92CA00733D05 /* whosGoatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whosGoatVC.swift; sourceTree = "<group>"; };
+		2D1636D8214D95DD00733D05 /* chooseYourGoatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chooseYourGoatVC.swift; sourceTree = "<group>"; };
+		2D1636DA214D98B500733D05 /* goatOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goatOptionView.swift; sourceTree = "<group>"; };
 		2D27380F214336D800706CA7 /* LandingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingVC.swift; sourceTree = "<group>"; };
 		2D542A452145C1630016C477 /* TopicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCell.swift; sourceTree = "<group>"; };
 		2D6420CE213DEA3C0006BD7B /* refactorDojo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = refactorDojo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +90,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D1636D6214D92D000733D05 /* ProtocolDelegate Answers */ = {
+			isa = PBXGroup;
+			children = (
+				2D1636D4214D92CA00733D05 /* whosGoatVC.swift */,
+				2D1636D8214D95DD00733D05 /* chooseYourGoatVC.swift */,
+				2D1636DA214D98B500733D05 /* goatOptionView.swift */,
+			);
+			path = "ProtocolDelegate Answers";
+			sourceTree = "<group>";
+		};
+		2D1636D7214D931800733D05 /* ProtocolDelegate Test */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "ProtocolDelegate Test";
+			sourceTree = "<group>";
+		};
 		2D6420C5213DEA3C0006BD7B = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +132,8 @@
 			children = (
 				2D6420D1213DEA3C0006BD7B /* AppDelegate.swift */,
 				2D6420D5213DEA3C0006BD7B /* Main.storyboard */,
+				2D1636D7214D931800733D05 /* ProtocolDelegate Test */,
+				2D1636D6214D92D000733D05 /* ProtocolDelegate Answers */,
 				2D27380F214336D800706CA7 /* LandingVC.swift */,
 				690CB7C1213F4B850058CC38 /* DestinyListTVC.swift */,
 				2DF3867B213F6E87009C86D0 /* DevTopicsTVC.swift */,
@@ -271,12 +296,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D1636D9214D95DD00733D05 /* chooseYourGoatVC.swift in Sources */,
+				2D1636D5214D92CA00733D05 /* whosGoatVC.swift in Sources */,
 				2D542A462145C1630016C477 /* TopicCell.swift in Sources */,
 				690CB7C0213F36820058CC38 /* AccountSignupVC.swift in Sources */,
 				2DF3867C213F6E87009C86D0 /* DevTopicsTVC.swift in Sources */,
 				690CB7C2213F4B850058CC38 /* DestinyListTVC.swift in Sources */,
 				2D273810214336D800706CA7 /* LandingVC.swift in Sources */,
 				2D6420D2213DEA3C0006BD7B /* AppDelegate.swift in Sources */,
+				2D1636DB214D98B500733D05 /* goatOptionView.swift in Sources */,
 				2D6420DA213DEA3C0006BD7B /* refactorDojo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

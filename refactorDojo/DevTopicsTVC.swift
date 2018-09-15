@@ -41,5 +41,14 @@ class DevTopicsTVC: UITableViewController {
 		devTopicsCell.textLabel?.text = devTopics[indexPath.row]
 		return devTopicsCell
 	}
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let selectedTopic = self.devTopics[indexPath.row]
+        
+        if selectedTopic == "Protocols & Delegates (Answers)" {
+            self.performSegue(withIdentifier: "whoYouGotSegue", sender: self)
+        }
+    }
 	
 }
