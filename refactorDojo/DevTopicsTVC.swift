@@ -46,8 +46,15 @@ class DevTopicsTVC: UITableViewController {
         
         let selectedTopic = self.devTopics[indexPath.row]
         
-        if selectedTopic == "Protocols & Delegates (Answers)" {
+        switch selectedTopic {
+        case "Protocols & Delegates (Test)" :
+            self.performSegue(withIdentifier: "whoYouGotTestSegue", sender: self)
+            break
+        case "Protocols & Delegates (Answers)" :
             self.performSegue(withIdentifier: "whoYouGotSegue", sender: self)
+            break
+        default:
+            break
         }
     }
 	
