@@ -10,14 +10,17 @@ import UIKit
 
 class TopicCell: UITableViewCell {
     
+    var backColor : UIColor = .clear
     
     /**
      this is a default initializer, which will be called
      any time an instance of this class is created.
     **/
     required init?(coder aDecoder: NSCoder) {
-        
+            
         super.init(coder: aDecoder)
+        
+        self.backgroundColor = backColor
         
         /**
          To-Do:

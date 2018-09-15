@@ -33,8 +33,9 @@ extension LandingVC : AccountSignupVCDelegate {
          * let's make sure we're listening to it for any delegate events
          * it might call.
          **/
+        
         if let destination = segue.destination as? AccountSignupVC {
-            destination.delegate = self
+            destination.accountSignupDelegate = self
         }
     }
     
@@ -43,6 +44,7 @@ extension LandingVC : AccountSignupVCDelegate {
      * was successful, we can pass the user over to the first topics list
      **/
     func accountCreated(forUser: String?) {
+        
         self.performSegue(withIdentifier: "chooseDestinySegue", sender: self)
     }
 }

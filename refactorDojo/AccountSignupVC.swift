@@ -30,15 +30,13 @@ class AccountSignupVC: UIViewController {
     @IBOutlet weak var signUpBtn: UIButton!
     @IBOutlet weak var feedbackLabel: UILabel!
     
-    var accountCreated : Bool = false
-    
     /**
      * Here, we add a delegate property to our main class to allow
      * any views conforming to our protocol (in our case, the LandingVC),
      * to hook into this and listen to any explicitly created instance
      * of this AccountSignupVC class.
      **/
-    weak var delegate : AccountSignupVCDelegate?
+    weak var accountSignupDelegate : AccountSignupVCDelegate?
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -76,11 +74,11 @@ class AccountSignupVC: UIViewController {
                  * initial landing screen is showing again), fire off
                  * account created delegate event.
                  **/
-                self.delegate?.accountCreated(forUser: self.emailTextField.text)
+                self.accountSignupDelegate?.accountCreated(forUser: self.emailTextField.text)
+                
             })
         } else {
             // Account creation failed
-			
         }
     }
     
